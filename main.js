@@ -29,3 +29,20 @@ document.addEventListener("click", (event) => {
     mobileNav.classList.add("hidden");
   }
 });
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const answer = item.querySelector(".faq-answer");
+  const toggle = item.querySelector(".faq-toggle");
+
+  item.addEventListener("click", () => {
+    answer.classList.toggle("hidden");
+
+    if (answer.classList.contains("hidden")) {
+      toggle.textContent = "+";
+    } else {
+      toggle.textContent = "-";
+    }
+  });
+});
