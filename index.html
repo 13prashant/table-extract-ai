@@ -26,6 +26,7 @@
       @layer base {
         html {
           font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+          font-weight: 500;
         }
       }
 
@@ -56,7 +57,7 @@
   </head>
   <body class="">
     <!-- -------------------- Header -------------------- -->
-    <header class="bg-secondary">
+    <header class="bg-[#37B7C333]">
       <div
         class="container px-3 md:px-16 lg:px-30 py-4 md:py-5 lg:py-7 mx-auto flex justify-between items-center duration-200"
       >
@@ -72,24 +73,16 @@
           <!-- -------------------- Desktop Nav -------------------- -->
           <nav class="hidden lg:block">
             <ul class="flex gap-10">
-              <li
-                class="nav-link-mobile hover:text-primary font-[500] duration-200"
-              >
+              <li class="nav-link-mobile hover:text-primary duration-200">
                 <a href="#features">Features</a>
               </li>
-              <li
-                class="nav-link-mobile hover:text-primary font-[500] duration-200"
-              >
+              <li class="nav-link-mobile hover:text-primary duration-200">
                 <a href="#pricing">Pricing</a>
               </li>
-              <li
-                class="nav-link-mobile hover:text-primary font-[500] duration-200"
-              >
+              <li class="nav-link-mobile hover:text-primary duration-200">
                 <a href="#faq">FAQ</a>
               </li>
-              <li
-                class="nav-link-mobile hover:text-primary font-[500] duration-200"
-              >
+              <li class="nav-link-mobile hover:text-primary duration-200">
                 <a href="/about.html">About</a>
               </li>
             </ul>
@@ -165,7 +158,61 @@
     </header>
     <!-- -------------------- Header -------------------- -->
 
-    <main></main>
+    <main>
+      <!-- -------------------- Hero Section -------------------- -->
+      <section class="bg-gradient-to-b from-[#37B7C333] to-background">
+        <div
+          class="container px-3 py-16 md:py-24 mx-auto flex flex-col items-center duration-200"
+        >
+          <span
+            class="text-sm font-semibold text-primary bg-background px-2 md:px-4 py-1 md:py-3 rounded-xl flex items-center gap-2 border-2 border-border duration-200"
+            ><img
+              src="/assets/sparkles.svg"
+              alt="TableExtract.ai logo"
+              class="w-3 md:w-4 duration-200"
+            />
+            Powered by advanced AI</span
+          >
+          <h1
+            class="mt-6 text-4xl md:text-6xl text-center md:leading-[84px] font-semibold max-w-5xl duration-200"
+          >
+            Extract tabular data from images and PDFs
+            <span class="text-primary">in seconds</span>
+          </h1>
+          <p
+            class="text-foreground/70 text-center max-w-xl mt-5 md:leading-[35.2px]"
+          >
+            AI-powered tool for extracting tabular data from PDFs and images,
+            turning them into structured formats like CSV or Excel.
+          </p>
+          <button class="btn btn-primary mt-12">Get started for free</button>
+
+          <div
+            class="bg-background px-4 md:px-24 lg:px-60 py-16 md:py-24 mt-14 rounded-xl flex flex-col items-center gap-4 border-[3px] border-primary duration-200"
+          >
+            <img
+              src="/assets/upload.svg"
+              alt="TableExtract.ai logo"
+              class="mb-2"
+            />
+            <h4
+              class="font-semibold text-sm md:text-xl text-foreground/70 duration-200"
+            >
+              <span class="text-primary">Click to upload</span> or drag and drop
+            </h4>
+            <h4
+              class="font-semibold text-sm md:text-xl text-foreground/70 duration-200"
+            >
+              PDF, JPG, JPEG or PNG (max. 1MB file size)
+            </h4>
+            <p class="text-foreground/70 text-foreground/70">
+              This’s a demo - limit 1/day
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------- Hero Section -------------------- -->
+    </main>
 
     <script src="main.js"></script>
   </body>
