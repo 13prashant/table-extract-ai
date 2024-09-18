@@ -16,6 +16,8 @@
               "primary-foreground": "#ffffff",
               secondary: "#EBF4F6",
               "secondary-foreground": "#088395",
+              accent: "#03272C",
+              "accent-foreground": "#ffffff",
               border: "#CCF0F5",
             },
           },
@@ -37,6 +39,10 @@
 
         .btn-primary {
           @apply bg-primary hover:bg-primary/80 text-primary-foreground;
+        }
+
+        .btn-secondary {
+          @apply bg-accent hover:bg-accent/80 text-accent-foreground;
         }
 
         .btn-outline {
@@ -517,6 +523,241 @@
         </div>
       </section>
       <!-- -------------------- Solution Section -------------------- -->
+
+      <!-- -------------------- Testimonials Section -------------------- -->
+      <section class="container px-3 mx-auto py-20">
+        <div class="flex flex-col items-center gap-5">
+          <span class="heading">Testimonials</span>
+          <h2 class="title">
+            Love by businesses and creators around the world
+          </h2>
+          <p class="subtitle">
+            TableExtract.ai is a favorite among professionals and businesses for
+            its intuitive interface and reliable performance.
+          </p>
+        </div>
+
+        <h2>Carousel goes here</h2>
+      </section>
+      <!-- -------------------- Testimonials Section -------------------- -->
+
+      <!-- -------------------- Pricing Section -------------------- -->
+      <section class="container px-3 mx-auto py-20">
+        <div class="flex flex-col items-center gap-5">
+          <span class="heading">Pricing</span>
+          <h2 class="title">Simple pricing</h2>
+          <p class="subtitle">
+            A pricing that’s based on your needs. Choose what works for you and
+            upgrade when needed.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-wrap justify-center gap-5 md:gap-9 mt-14 md:mt-28 duration-200"
+        >
+          <div
+            class="bg-background p-8 border border-[#E4E7EC] rounded-xl shadow-md max-w-[439px]"
+          >
+            <div class="p-2 border border-[#D0D5DD] rounded-2xl w-fit">
+              <span
+                class="border border-[#D0D5DD] rounded-xl p-2 flex gap-2 items-center text-xs"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    r="4.5"
+                    fill="#088395"
+                    stroke="#E1FBFF"
+                    stroke-width="3"
+                  />
+                </svg>
+                Basic plan</span
+              >
+            </div>
+            <h2 class="title !text-left mt-6 mb-2">Pay as you go</h2>
+            <p class="text-foreground/70 text-lg">
+              A plan designed for those who want to test the waters and explore
+              their options
+            </p>
+            <hr class="my-8" />
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+            </div>
+            <hr class="my-8" />
+            <button class="btn btn-primary w-full">Try for free</button>
+          </div>
+          <div
+            class="bg-secondary p-8 border border-[#E4E7EC] rounded-xl shadow-md max-w-[439px]"
+          >
+            <div
+              class="p-2 border border-[#D0D5DD] rounded-2xl w-fit flex gap-2 items-center text-xs"
+            >
+              <span
+                class="border border-[#D0D5DD] rounded-xl p-2 flex gap-2 items-center text-xs"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    r="4.5"
+                    fill="#088395"
+                    stroke="#E1FBFF"
+                    stroke-width="3"
+                  />
+                </svg>
+                Starter plan</span
+              >
+              <span class="text-primary">Most popular</span>
+            </div>
+            <h2 class="title !text-left mt-6 mb-2">$17/mo</h2>
+            <p class="text-foreground/70 text-lg">
+              A plan designed for those who want to test the waters and explore
+              their options
+            </p>
+            <hr class="my-8" />
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+            </div>
+            <hr class="my-8" />
+            <button class="btn btn-secondary w-full !bg-accent">
+              Try for free
+            </button>
+          </div>
+          <div
+            class="bg-background p-8 border border-[#E4E7EC] rounded-xl shadow-md max-w-[439px]"
+          >
+            <div class="p-2 border border-[#D0D5DD] rounded-2xl w-fit">
+              <span
+                class="border border-[#D0D5DD] rounded-xl p-2 flex gap-2 items-center text-xs"
+              >
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="6"
+                    cy="6"
+                    r="4.5"
+                    fill="#088395"
+                    stroke="#E1FBFF"
+                    stroke-width="3"
+                  />
+                </svg>
+                Pro plan</span
+              >
+            </div>
+            <h2 class="title !text-left mt-6 mb-2">$33/mo</h2>
+            <p class="text-foreground/70 text-lg">
+              A plan designed for those who want to test the waters and explore
+              their options
+            </p>
+            <hr class="my-8" />
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+              <div class="flex gap-3 items-center">
+                <img src="./assets/check.svg" alt="Check icon" />
+                <span>Access to all basic features</span>
+              </div>
+            </div>
+            <hr class="my-8" />
+            <button class="btn btn-primary w-full">Try for free</button>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------- Pricing Section -------------------- -->
     </main>
 
     <script src="main.js"></script>
