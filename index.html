@@ -42,6 +42,18 @@
         .btn-outline {
           @apply bg-transparent hover:bg-primary/80 text-secondary-foreground hover:text-primary-foreground border-2 border-primary/15;
         }
+
+        .heading {
+          @apply bg-secondary text-primary rounded-xl border-2 border-border px-4 py-3;
+        }
+
+        .title {
+          @apply text-5xl font-semibold text-center max-w-3xl leading-[55px];
+        }
+
+        .subtitle {
+          @apply text-foreground/70 text-xl text-center max-w-3xl leading-[35px];
+        }
       }
     </style>
     <!-- -------------------- Tailwind Configuration -------------------- -->
@@ -179,7 +191,7 @@
             <span class="text-primary">in seconds</span>
           </h1>
           <p
-            class="text-foreground/70 text-center max-w-xl mt-5 md:leading-[35.2px]"
+            class="text-foreground/70 text-center md:text-xl max-w-2xl mt-5 md:leading-[35.2px] duration-200"
           >
             AI-powered tool for extracting tabular data from PDFs and images,
             turning them into structured formats like CSV or Excel.
@@ -286,6 +298,56 @@
         </div>
       </section>
       <!-- -------------------- Brands Section -------------------- -->
+
+      <!-- -------------------- Problem Section -------------------- -->
+      <section
+        class="container px-3 mx-auto py-20 flex flex-col items-center gap-5"
+      >
+        <span class="heading">The problem</span>
+        <h2 class="title">Extracting tabular data has always been a problem</h2>
+        <p class="subtitle">
+          There's a need for a reliable, automated solution that can accurately
+          extract and convert data into structured, usable formats.
+        </p>
+
+        <div
+          class="mt-14 md:mt-28 flex flex-wrap gap-10 md:gap-24 justify-center duration-200"
+        >
+          <div class="max-w-96 flex flex-col gap-5 p-4">
+            <img
+              src="./assets/too-much-data.svg"
+              alt="File icon"
+              class="w-16"
+            />
+            <h6 class="font-semibold text-xl">Too much data</h6>
+            <p class="text-foreground/70">
+              Businesses frequently encounter large volumes of critical data
+              locked within invoices, receipts, tax forms and more.
+            </p>
+          </div>
+          <div class="max-w-96 flex flex-col gap-5 p-4">
+            <img
+              src="./assets/time-consuming.svg"
+              alt="File icon"
+              class="w-16"
+            />
+            <h6 class="font-semibold text-xl">Time-consuming</h6>
+            <p class="text-foreground/70">
+              Manual extraction of this data is labor-intensive and inefficient,
+              leading to wasting significant time.
+            </p>
+          </div>
+          <div class="max-w-96 flex flex-col gap-5 p-4">
+            <img src="./assets/error-prone.svg" alt="File icon" class="w-16" />
+            <h6 class="font-semibold text-xl">Error-prone</h6>
+            <p class="text-foreground/70">
+              The manual process of extracting tabular data from documents is
+              fraught with errors, leading to unreliable information.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------- Problem Section -------------------- -->
     </main>
 
     <script src="main.js"></script>
