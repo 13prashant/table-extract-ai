@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -------------------- Tailwind Configuration -------------------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#ffffff",
+              foreground: "#03272C",
+              primary: "#088395",
+              "primary-foreground": "#ffffff",
+              secondary: "#EBF4F6",
+              "secondary-foreground": "#088395",
+              accent: "#03272C",
+              "accent-foreground": "#ffffff",
+              border: "#CCF0F5",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        html {
+          font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+          font-weight: 500;
+        }
+      }
+
+      @layer utilities {
+        .te-container {
+          @apply container px-3 md:px-16 mx-auto duration-200;
+        }
+
+        .btn {
+          @apply px-3 md:px-5 py-2 md:py-4 text-sm md:text-base rounded-xl font-semibold duration-200;
+        }
+
+        .btn-primary {
+          @apply bg-primary hover:bg-primary/80 text-primary-foreground;
+        }
+
+        .btn-secondary {
+          @apply bg-accent hover:bg-accent/80 text-accent-foreground;
+        }
+
+        .btn-outline {
+          @apply bg-transparent hover:bg-primary/80 text-secondary-foreground hover:text-primary-foreground border-2 border-primary/15;
+        }
+
+        .heading {
+          @apply bg-secondary text-primary rounded-xl border-2 border-border px-4 py-3;
+        }
+
+        .title {
+          @apply text-5xl font-semibold text-center max-w-3xl leading-[55px];
+        }
+
+        .subtitle {
+          @apply text-foreground/70 text-xl text-center max-w-3xl leading-[35px];
+        }
+      }
+    </style>
+    <!-- -------------------- Tailwind Configuration -------------------- -->
+
+    <title>TableExtract.ai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <!-- -------------------- Header -------------------- -->
+    <header class="bg-[#37B7C333]">
+      <div
+        class="te-container py-4 md:py-5 lg:py-7 flex justify-between items-center"
+      >
+        <div class="flex gap-14 items-center">
+          <a href="/">
+            <img
+              src="./assets/logo.svg"
+              alt="TableExtract.ai logo"
+              class="w-40 lg:w-48 duration-200"
+            />
+          </a>
+
+          <!-- -------------------- Desktop Nav -------------------- -->
+          <nav class="hidden lg:block">
+            <ul class="flex gap-10">
+              <li class="nav-link-mobile hover:text-primary duration-200">
+                <a href="#features">Features</a>
+              </li>
+              <li class="nav-link-mobile hover:text-primary duration-200">
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-link-mobile hover:text-primary duration-200">
+                <a href="#faq">FAQ</a>
+              </li>
+              <li class="nav-link-mobile hover:text-primary duration-200">
+                <a href="/about.html">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="hidden lg:flex gap-4">
+          <button class="btn btn-outline">Sign in</button>
+          <button class="btn btn-primary">Get started</button>
+        </div>
+        <!-- -------------------- Desktop Nav -------------------- -->
+
+        <!-- -------------------- Mobile Nav -------------------- -->
+        <svg
+          id="hamburger"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-8 hover:cursor-pointer hover:text-primary lg:hidden duration-200"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <nav
+          id="nav-mobile"
+          class="hidden absolute top-0 right-0 w-10/12 h-full bg-background/90 backdrop-filter backdrop-blur-sm p-20 lg:hidden"
+        >
+          <svg
+            id="btn-close"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8 absolute top-3 right-3 cursor-pointer hover:text-primary duration-200"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+
+          <ul class="flex flex-col gap-10">
+            <li class="nav-link-mobile hover:text-primary duration-200">
+              <a href="#features">Features</a>
+            </li>
+            <li class="nav-link-mobile hover:text-primary duration-200">
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-link-mobile hover:text-primary duration-200">
+              <a href="#faq">FAQ</a>
+            </li>
+            <li class="nav-link-mobile hover:text-primary duration-200">
+              <a href="/about.html">About</a>
+            </li>
+          </ul>
+
+          <div class="mt-10 flex flex-col gap-4">
+            <button class="btn btn-outline">Sign in</button>
+            <button class="btn btn-primary">Get started</button>
+          </div>
+        </nav>
+        <!-- -------------------- Mobile Nav -------------------- -->
+      </div>
+    </header>
+    <!-- -------------------- Header -------------------- -->
+
+    <main>
+      <!-- -------------------- Main Section -------------------- -->
+      <section class="">
+        <div class="te-container py-20 flex flex-col items-center gap-5">
+          <span class="heading">About us</span>
+          <h2 class="title">About the company</h2>
+          <p class="subtitle">
+            Learn more about TableExtratc.ai and the team behind it.
+          </p>
+        </div>
+
+        <div class="bg-secondary">
+          <div
+            class="te-container py-10 md:py-20 flex flex-col xl:flex-row items-center gap-20"
+          >
+            <img src="./assets/about.png" alt="A woman working on a desk" />
+            <div class="flex flex-col gap-5">
+              <p
+                class="text-primary text-center xl:text-left text-lg duration-200"
+              >
+                Building technologies that enhance human efficiency
+              </p>
+              <h2 class="title xl:!text-left duration-200">
+                We’re only just getting started on our journey
+              </h2>
+              <p class="subtitle xl:!text-left duration-200">
+                Our mission is to design and develop innovative tools that go
+                beyond mere functionality, aiming to simplify and enhance
+                everyday life.
+              </p>
+              <div
+                class="flex gap-12 mt-12 justify-center xl:justify-start duration-200"
+              >
+                <div>
+                  <h1
+                    class="text-primary font-semibold text-2xl sm:text-4xl md:text-7xl duration-200"
+                  >
+                    10+
+                  </h1>
+                  <p class="text-xl">Projects completed</p>
+                </div>
+                <div>
+                  <h1
+                    class="text-primary font-semibold text-2xl sm:text-4xl md:text-7xl duration-200"
+                  >
+                    9k+
+                  </h1>
+                  <p class="text-xl">Users</p>
+                </div>
+                <div>
+                  <h1
+                    class="text-primary font-semibold text-2xl sm:text-4xl md:text-7xl duration-200"
+                  >
+                    200+
+                  </h1>
+                  <p class="text-xl">5 -star reviews</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------- Main Section -------------------- -->
+
+      <!-- -------------------- Global Section -------------------- -->
+      <section class="te-container py-20">
+        <div class="flex flex-col items-center gap-5">
+          <h2 class="title">Our team is global</h2>
+          <p class="subtitle">
+            We have offices and teams all around the world.
+          </p>
+        </div>
+
+        <img
+          src="./assets/map.png"
+          alt="Office location in World map"
+          class="mt-28"
+        />
+      </section>
+
+      <section class="bg-secondary">
+        <div
+          class="te-container py-20 flex flex-col gap-24 lg:flex-row justify-between duration-200"
+        >
+          <div class="text-center flex flex-col gap-5 items-center">
+            <h6 class="font-semibold text-xl">Sales</h6>
+            <h5 class="text-foreground/70 text-lg">Contact our sales team</h5>
+            <a
+              class="font-semibold text-lg text-primary cursor-pointer hover:text-primary/80 duration-200"
+              href=""
+              >sales@email.com</a
+            >
+          </div>
+          <div class="text-center flex flex-col gap-5 items-center">
+            <h6 class="font-semibold text-xl">Help</h6>
+            <h5 class="text-foreground/70 text-lg">
+              Run into any issues or problems? We’re here to help
+            </h5>
+            <a
+              class="font-semibold text-lg text-primary cursor-pointer hover:text-primary/80 duration-200"
+              href=""
+              >support@email.com</a
+            >
+          </div>
+          <div class="text-center flex flex-col gap-5 items-center">
+            <h6 class="font-semibold text-xl">Phone</h6>
+            <h5 class="text-foreground/70 text-lg">Mon-Fri from 8am to 5pm</h5>
+            <a
+              class="font-semibold text-lg text-primary cursor-pointer hover:text-primary/80 duration-200"
+              href=""
+              >+1 (555) 000-0000</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------- Global Section -------------------- -->
+
+      <!-- -------------------- Team Section -------------------- -->
+      <section class="te-container py-20">
+        <div class="flex flex-col items-center gap-5">
+          <h2 class="title">We’re a fast growing team</h2>
+          <p class="subtitle">
+            We're a group of dedicated and highly skilled professionals.
+          </p>
+        </div>
+
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 mt-28 duration-200"
+        >
+          <div class="flex flex-col gap-5 items-center">
+            <img
+              src="./assets/team-member.png"
+              alt="Team member"
+              class="w-24"
+            />
+            <div class="text-center">
+              <h6 class="font-semibold text-xl">Amélie Laurent</h6>
+              <h5 class="text-primary text-lg">Founder & CEO</h5>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 items-center">
+            <img
+              src="./assets/team-member.png"
+              alt="Team member"
+              class="w-24"
+            />
+            <div class="text-center">
+              <h6 class="font-semibold text-xl">Amélie Laurent</h6>
+              <h5 class="text-primary text-lg">Founder & CEO</h5>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 items-center">
+            <img
+              src="./assets/team-member.png"
+              alt="Team member"
+              class="w-24"
+            />
+            <div class="text-center">
+              <h6 class="font-semibold text-xl">Amélie Laurent</h6>
+              <h5 class="text-primary text-lg">Founder & CEO</h5>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 items-center">
+            <img
+              src="./assets/team-member.png"
+              alt="Team member"
+              class="w-24"
+            />
+            <div class="text-center">
+              <h6 class="font-semibold text-xl">Amélie Laurent</h6>
+              <h5 class="text-primary text-lg">Founder & CEO</h5>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 items-center">
+            <img
+              src="./assets/team-member.png"
+              alt="Team member"
+              class="w-24"
+            />
+            <div class="text-center">
+              <h6 class="font-semibold text-xl">Amélie Laurent</h6>
+              <h5 class="text-primary text-lg">Founder & CEO</h5>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 items-center">
+            <img
+              src="./assets/team-member.png"
+              alt="Team member"
+              class="w-24"
+            />
+            <div class="text-center">
+              <h6 class="font-semibold text-xl">Amélie Laurent</h6>
+              <h5 class="text-primary text-lg">Founder & CEO</h5>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 items-center">
+            <img
+              src="./assets/team-member.png"
+              alt="Team member"
+              class="w-24"
+            />
+            <div class="text-center">
+              <h6 class="font-semibold text-xl">Amélie Laurent</h6>
+              <h5 class="text-primary text-lg">Founder & CEO</h5>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5 items-center">
+            <img
+              src="./assets/team-member.png"
+              alt="Team member"
+              class="w-24"
+            />
+            <div class="text-center">
+              <h6 class="font-semibold text-xl">Amélie Laurent</h6>
+              <h5 class="text-primary text-lg">Founder & CEO</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------- Team Section -------------------- -->
+
+      <!-- -------------------- CTA Section -------------------- -->
+      <section class="bg-accent">
+        <div class="te-container">
+          <div class="border-l border-r border-[#052E34]">
+            <div class="px-16">
+              <div
+                class="te-container py-20 text-accent-foreground flex flex-col items-center"
+              >
+                <h1
+                  class="mt-6 text-4xl md:text-6xl text-center md:leading-[84px] font-semibold max-w-5xl duration-200"
+                >
+                  Experience efficiency with less effort and more speed
+                </h1>
+                <p
+                  class="text-center md:text-xl max-w-2xl mt-5 md:leading-[35.2px] duration-200"
+                >
+                  AI-powered tool for extracting tabular data from PDFs and
+                  images, turning them into structured formats like CSV or
+                  Excel.
+                </p>
+                <button
+                  class="btn btn-primary !bg-background hover:!bg-background/80 !text-foreground mt-12 duration-200"
+                >
+                  Get started for free
+                </button>
+
+                <div class="flex mt-12">
+                  <img
+                    src="./assets/person-1.svg"
+                    alt="Person cartoon image"
+                    class=""
+                  />
+                  <img
+                    src="./assets/person-2.svg"
+                    alt="Person cartoon image"
+                    class="-m-2"
+                  />
+                  <img
+                    src="./assets/person-3.svg"
+                    alt="Person cartoon image"
+                    class="-ml-2"
+                  />
+                  <img
+                    src="./assets/person-4.svg"
+                    alt="Person cartoon image"
+                    class="-ml-2"
+                  />
+                </div>
+
+                <p class="text-background/70 mt-5 text-center">
+                  Join 500+ founders & creators
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------- CTA Section -------------------- -->
+    </main>
+
+    <!-- -------------------- Footer -------------------- -->
+    <!-- container px-3 md:px-16 mx-auto duration-200 -->
+    <footer class="bg-accent border-t border-[#052E34]">
+      <div class="te-container">
+        <div class="relative border-l border-r border-[#052E34]">
+          <img
+            src="./assets/ellipse.svg"
+            alt="Ellipse"
+            class="absolute -left-[6px] -top-[6px]"
+          />
+          <img
+            src="./assets/ellipse.svg"
+            alt="Ellipse"
+            class="absolute -right-[6px] -top-[6px]"
+          />
+          <div
+            class="p-16 flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between duration-200"
+          >
+            <a href="/">
+              <img
+                src="./assets/logo-light.svg"
+                alt="TableExtract.ai logo"
+                class="w-40 lg:w-48 duration-200"
+              />
+            </a>
+
+            <nav class="mt-8 lg:mt-0 duration-200">
+              <ul class="flex gap-10">
+                <li
+                  class="text-accent-foreground/50 hover:text-primary duration-200"
+                >
+                  <a href="/about.html">About</a>
+                </li>
+                <li
+                  class="text-accent-foreground/50 hover:text-primary duration-200"
+                >
+                  <a href="/terms-and-conditions.html">Terms & Conditions</a>
+                </li>
+                <li
+                  class="text-accent-foreground/50 hover:text-primary duration-200"
+                >
+                  <a href="/privacy-policy.html">Privacy Policy</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex gap-6">
+              <a href="https://www.instagram.com/" target="_blank">
+                <img
+                  src="./assets/instagram.svg"
+                  alt="Instagram logo"
+                  class="cursor-pointer hover:opacity-70 duration-200"
+                />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img
+                  src="./assets/facebook.svg"
+                  alt="Facebook logo"
+                  class="cursor-pointer hover:opacity-70 duration-200"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- -------------------- Footer -------------------- -->
+
+    <script src="main.js"></script>
+  </body>
+</html>
