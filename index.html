@@ -33,6 +33,10 @@
       }
 
       @layer utilities {
+        .te-container {
+          @apply container px-3 md:px-16 mx-auto duration-200;
+        }
+
         .btn {
           @apply px-3 md:px-5 py-2 md:py-4 text-sm md:text-base rounded-xl font-semibold duration-200;
         }
@@ -77,7 +81,7 @@
     <!-- -------------------- Header -------------------- -->
     <header class="bg-[#37B7C333]">
       <div
-        class="container px-3 md:px-16 lg:px-30 py-4 md:py-5 lg:py-7 mx-auto flex justify-between items-center duration-200"
+        class="te-container py-4 md:py-5 lg:py-7 flex justify-between items-center"
       >
         <div class="flex gap-14 items-center">
           <a href="/">
@@ -178,9 +182,7 @@
     <main>
       <!-- -------------------- Hero Section -------------------- -->
       <section class="bg-gradient-to-b from-[#37B7C333] to-background">
-        <div
-          class="container px-3 py-16 md:py-24 mx-auto flex flex-col items-center duration-200"
-        >
+        <div class="te-container py-16 md:py-24 flex flex-col items-center">
           <span
             class="text-sm font-semibold text-primary bg-background px-2 md:px-4 py-1 md:py-3 rounded-xl flex items-center gap-2 border-2 border-border duration-200"
             ><img
@@ -228,7 +230,7 @@
 
       <!-- -------------------- Brands Section -------------------- -->
       <section
-        class="container px-3 pb-14 mx-auto flex flex-col items-center gap-12 overflow-clip"
+        class="te-container pb-14 flex flex-col items-center gap-12 overflow-clip"
       >
         <p>Trusted by global brands</p>
         <div
@@ -306,7 +308,7 @@
       <!-- -------------------- Brands Section -------------------- -->
 
       <!-- -------------------- Problem Section -------------------- -->
-      <section class="container px-3 mx-auto py-20">
+      <section class="te-container py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">The problem</span>
           <h2 class="title">
@@ -358,7 +360,7 @@
       <!-- -------------------- Problem Section -------------------- -->
 
       <!-- -------------------- Solution Section -------------------- -->
-      <section class="container px-3 mx-auto py-20">
+      <section class="te-container py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">The Solution</span>
           <h2 class="title">
@@ -525,7 +527,7 @@
       <!-- -------------------- Solution Section -------------------- -->
 
       <!-- -------------------- Testimonials Section -------------------- -->
-      <section class="container px-3 mx-auto py-20">
+      <section class="te-container py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">Testimonials</span>
           <h2 class="title">
@@ -542,7 +544,7 @@
       <!-- -------------------- Testimonials Section -------------------- -->
 
       <!-- -------------------- Pricing Section -------------------- -->
-      <section class="container px-3 mx-auto py-20">
+      <section class="te-container py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">Pricing</span>
           <h2 class="title">Simple pricing</h2>
@@ -760,7 +762,7 @@
       <!-- -------------------- Pricing Section -------------------- -->
 
       <!-- -------------------- FAQ Section -------------------- -->
-      <section class="container px-3 mx-auto py-20">
+      <section class="te-container py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">FAQ</span>
           <h2 class="title">Frequently asked questions</h2>
@@ -772,57 +774,130 @@
 
       <!-- -------------------- CTA Section -------------------- -->
       <section class="bg-accent">
-        <div
-          class="container px-3 mx-auto py-20 text-accent-foreground flex flex-col items-center"
-        >
-          <h1
-            class="mt-6 text-4xl md:text-6xl text-center md:leading-[84px] font-semibold max-w-5xl duration-200"
-          >
-            Experience efficiency with less effort and more speed
-          </h1>
-          <p
-            class="text-center md:text-xl max-w-2xl mt-5 md:leading-[35.2px] duration-200"
-          >
-            AI-powered tool for extracting tabular data from PDFs and images,
-            turning them into structured formats like CSV or Excel.
-          </p>
-          <button
-            class="btn btn-primary !bg-background hover:!bg-background/80 !text-foreground mt-12 duration-200"
-          >
-            Get started for free
-          </button>
+        <div class="te-container">
+          <div class="border-l border-r border-[#052E34]">
+            <div class="px-16">
+              <div
+                class="te-container py-20 text-accent-foreground flex flex-col items-center"
+              >
+                <h1
+                  class="mt-6 text-4xl md:text-6xl text-center md:leading-[84px] font-semibold max-w-5xl duration-200"
+                >
+                  Experience efficiency with less effort and more speed
+                </h1>
+                <p
+                  class="text-center md:text-xl max-w-2xl mt-5 md:leading-[35.2px] duration-200"
+                >
+                  AI-powered tool for extracting tabular data from PDFs and
+                  images, turning them into structured formats like CSV or
+                  Excel.
+                </p>
+                <button
+                  class="btn btn-primary !bg-background hover:!bg-background/80 !text-foreground mt-12 duration-200"
+                >
+                  Get started for free
+                </button>
 
-          <div class="flex mt-12">
-            <img
-              src="./assets/person-1.svg"
-              alt="Person cartoon image"
-              class=""
-            />
-            <img
-              src="./assets/person-2.svg"
-              alt="Person cartoon image"
-              class="-m-2"
-            />
-            <img
-              src="./assets/person-3.svg"
-              alt="Person cartoon image"
-              class="-ml-2"
-            />
-            <img
-              src="./assets/person-4.svg"
-              alt="Person cartoon image"
-              class="-ml-2"
-            />
+                <div class="flex mt-12">
+                  <img
+                    src="./assets/person-1.svg"
+                    alt="Person cartoon image"
+                    class=""
+                  />
+                  <img
+                    src="./assets/person-2.svg"
+                    alt="Person cartoon image"
+                    class="-m-2"
+                  />
+                  <img
+                    src="./assets/person-3.svg"
+                    alt="Person cartoon image"
+                    class="-ml-2"
+                  />
+                  <img
+                    src="./assets/person-4.svg"
+                    alt="Person cartoon image"
+                    class="-ml-2"
+                  />
+                </div>
+
+                <p class="text-background/70 mt-5 text-center">
+                  Join 500+ founders & creators
+                </p>
+              </div>
+            </div>
           </div>
-
-          <p class="text-background/70 mt-5">Join 500+ founders & creators</p>
         </div>
       </section>
       <!-- -------------------- CTA Section -------------------- -->
     </main>
 
     <!-- -------------------- Footer -------------------- -->
+    <!-- container px-3 md:px-16 mx-auto duration-200 -->
+    <footer class="bg-accent border-t border-[#052E34]">
+      <div class="te-container">
+        <div class="relative border-l border-r border-[#052E34]">
+          <img
+            src="./assets/ellipse.svg"
+            alt="Ellipse"
+            class="absolute -left-[6px] -top-[6px]"
+          />
+          <img
+            src="./assets/ellipse.svg"
+            alt="Ellipse"
+            class="absolute -right-[6px] -top-[6px]"
+          />
+          <div
+            class="p-16 flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between duration-200"
+          >
+            <a href="/">
+              <img
+                src="./assets/logo-light.svg"
+                alt="TableExtract.ai logo"
+                class="w-40 lg:w-48 duration-200"
+              />
+            </a>
 
+            <nav class="mt-8 lg:mt-0 duration-200">
+              <ul class="flex gap-10">
+                <li
+                  class="text-accent-foreground/50 hover:text-primary duration-200"
+                >
+                  <a href="/about.html">About</a>
+                </li>
+                <li
+                  class="text-accent-foreground/50 hover:text-primary duration-200"
+                >
+                  <a href="/terms-and-conditions.html">Terms & Conditions</a>
+                </li>
+                <li
+                  class="text-accent-foreground/50 hover:text-primary duration-200"
+                >
+                  <a href="/privacy-policy.html">Privacy Policy</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="flex gap-6">
+              <a href="https://www.instagram.com/" target="_blank">
+                <img
+                  src="./assets/instagram.svg"
+                  alt="Instagram logo"
+                  class="cursor-pointer hover:opacity-70 duration-200"
+                />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img
+                  src="./assets/facebook.svg"
+                  alt="Facebook logo"
+                  class="cursor-pointer hover:opacity-70 duration-200"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- -------------------- Footer -------------------- -->
 
     <script src="main.js"></script>
