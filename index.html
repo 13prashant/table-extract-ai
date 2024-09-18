@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -------------------- Tailwind Configuration -------------------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#ffffff",
+              foreground: "#03272C",
+              primary: "#088395",
+              "primary-foreground": "#ffffff",
+              secondary: "#EBF4F6",
+              "secondary-foreground": "#088395",
+              border: "#CCF0F5",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        html {
+          font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+        }
+      }
+
+      @layer utilities {
+        .btn {
+          @apply px-3 md:px-5 py-2 md:py-4 text-sm md:text-base rounded-xl font-semibold duration-200;
+        }
+
+        .btn-primary {
+          @apply bg-primary hover:bg-primary/80 text-primary-foreground;
+        }
+
+        .btn-outline {
+          @apply bg-transparent hover:bg-primary/80 text-secondary-foreground hover:text-primary-foreground border-2 border-primary/15;
+        }
+      }
+    </style>
+    <!-- -------------------- Tailwind Configuration -------------------- -->
+
+    <title>TableExtract.ai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <!-- -------------------- Header -------------------- -->
+    <header class="bg-secondary">
+      <div
+        class="container px-3 md:px-16 lg:px-30 py-4 md:py-5 lg:py-7 mx-auto flex justify-between items-center duration-200"
+      >
+        <div class="flex gap-14 items-center">
+          <a href="/">
+            <img
+              src="/assets/logo.svg"
+              alt="TableExtract.ai logo"
+              class="w-40 lg:w-48 duration-200"
+            />
+          </a>
+
+          <!-- -------------------- Desktop Nav -------------------- -->
+          <nav class="hidden lg:block">
+            <ul class="flex gap-10">
+              <li
+                class="nav-link-mobile hover:text-primary font-[500] duration-200"
+              >
+                <a href="#features">Features</a>
+              </li>
+              <li
+                class="nav-link-mobile hover:text-primary font-[500] duration-200"
+              >
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li
+                class="nav-link-mobile hover:text-primary font-[500] duration-200"
+              >
+                <a href="#faq">FAQ</a>
+              </li>
+              <li
+                class="nav-link-mobile hover:text-primary font-[500] duration-200"
+              >
+                <a href="/about.html">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="hidden lg:flex gap-4">
+          <button class="btn btn-outline">Sign in</button>
+          <button class="btn btn-primary">Get started</button>
+        </div>
+
+        <!-- -------------------- Desktop Nav -------------------- -->
+
+        <!-- -------------------- Mobile Nav -------------------- -->
+        <svg
+          id="hamburger"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-8 hover:cursor-pointer hover:text-primary lg:hidden duration-200"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <nav
+          id="nav-mobile"
+          class="hidden absolute top-0 right-0 w-10/12 h-full bg-secondary/50 backdrop-filter backdrop-blur-sm p-20 lg:hidden"
+        >
+          <svg
+            id="btn-close"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8 absolute top-3 right-3 cursor-pointer hover:text-primary duration-200"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+
+          <ul class="flex flex-col gap-10">
+            <li class="nav-link-mobile hover:text-primary duration-200">
+              <a href="#features">Features</a>
+            </li>
+            <li class="nav-link-mobile hover:text-primary duration-200">
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-link-mobile hover:text-primary duration-200">
+              <a href="#faq">FAQ</a>
+            </li>
+            <li class="nav-link-mobile hover:text-primary duration-200">
+              <a href="/about.html">About</a>
+            </li>
+          </ul>
+
+          <div class="mt-10 flex flex-col gap-4">
+            <button class="btn btn-outline">Sign in</button>
+            <button class="btn btn-primary">Get started</button>
+          </div>
+        </nav>
+        <!-- -------------------- Mobile Nav -------------------- -->
+      </div>
+    </header>
+    <!-- -------------------- Header -------------------- -->
+
+    <main></main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
