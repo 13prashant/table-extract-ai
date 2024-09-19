@@ -49,88 +49,47 @@ faqItems.forEach((item) => {
   });
 });
 
-// Testimonials
-const carousel = document.querySelector(".carousel");
-const cards = document.querySelectorAll(".card");
-const dots = document.querySelectorAll(".dot");
-let currentIndex = 0;
+// Testimonials carousel
+const swiper = new Swiper(".swiper-slider", {
+  // Optional parameters
+  centeredSlides: true,
+  slidesPerView: 1,
+  grabCursor: true,
+  freeMode: false,
+  loop: true,
+  mousewheel: false,
+  keyboard: {
+    enabled: true,
+  },
 
-function getVisibleCards() {
-  if (window.innerWidth >= 1024) return 3;
-  if (window.innerWidth >= 768) return 2;
-  return 1;
-}
+  // Enabled autoplay mode
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 
-function updateCarousel() {
-  const visibleCards = getVisibleCards();
-  const offset = -currentIndex * (100 / visibleCards);
-  carousel.style.transform = `translateX(${offset}%)`;
-  updateDots();
-}
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: false,
+    clickable: true,
+  },
 
-function updateDots() {
-  dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentIndex);
-  });
-}
+  // If we need navigation
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-function goToSlide(index) {
-  currentIndex = index;
-  updateCarousel();
-}
-
-function nextSlide() {
-  const visibleCards = getVisibleCards();
-  currentIndex = (currentIndex + 1) % (cards.length - visibleCards + 1);
-  updateCarousel();
-}
-
-function startAutoplay() {
-  setInterval(nextSlide, 5000);
-}
-
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => goToSlide(index));
+  // Responsive breakpoints
+  breakpoints: {
+    640: {
+      slidesPerView: 1.25,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+  },
 });
-
-window.addEventListener("resize", updateCarousel);
-
-updateCarousel();
-startAutoplay();
-
-// Mouse drag functionality
-let isDragging = false;
-let startPosition = 0;
-let currentTranslate = 0;
-
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", drag);
-carousel.addEventListener("mouseup", dragEnd);
-carousel.addEventListener("mouseleave", dragEnd);
-
-function dragStart(e) {
-  isDragging = true;
-  startPosition = e.clientX - currentTranslate;
-  carousel.style.transition = "none";
-}
-
-function drag(e) {
-  if (isDragging) {
-    const currentPosition = e.clientX - startPosition;
-    currentTranslate = currentPosition;
-    carousel.style.transform = `translateX(${currentTranslate}px)`;
-  }
-}
-
-function dragEnd() {
-  isDragging = false;
-  const visibleCards = getVisibleCards();
-  const threshold = carousel.offsetWidth / visibleCards / 2;
-  const draggedSlides = Math.round(currentTranslate / threshold);
-  currentIndex = Math.max(
-    0,
-    Math.min(cards.length - visibleCards, currentIndex - draggedSlides)
-  );
-  updateCarousel();
-  carousel.style.transition = "transform 0.5s ease";
-}

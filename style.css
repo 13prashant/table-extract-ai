@@ -26,47 +26,35 @@ a {
 /* -------------------- Brands infinite scroll animation -------------------- */
 
 /* -------------------- Testimonials carousel -------------------- */
+.carousel-section {
+  margin: 0 auto;
+  padding-block: 5rem;
+}
+
 .carousel-container {
-  position: relative;
+  height: auto;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.swiper-slide {
+  opacity: 50%;
+}
+
+.swiper-slide-active {
+  opacity: 100%;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 40px;
   width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
-}
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease;
-  gap: 20px;
-}
-.card {
-  flex: 0 0 calc(33.333% - 40px);
-}
-.navigation-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  margin: 0 5px;
-  cursor: pointer;
-}
-.dot.active {
-  background-color: #088395;
+  margin-left: auto;
+  display: block;
 }
 
-@media (min-width: 768px) {
-  .card {
-    flex: 0 0 calc(50% - 40px);
-  }
-}
-
-@media (min-width: 1024px) {
-  .card {
-    flex: 0 0 calc(33.333% - 40px);
-  }
+.swiper-pagination-bullet-active {
+  background-color: #088395 !important;
 }
 /* -------------------- Testimonials carousel -------------------- */
 
