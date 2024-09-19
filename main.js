@@ -6,10 +6,16 @@ const mobileNavLinks = document.getElementsByClassName("nav-link-mobile");
 
 hamburger.addEventListener("click", () => {
   mobileNav.classList.remove("hidden");
+
+  // Disable scrolling
+  document.body.classList.add("overflow-hidden");
 });
 
 closeButton.addEventListener("click", () => {
   mobileNav.classList.add("hidden");
+
+  // Enable scrolling
+  document.body.classList.remove("overflow-hidden");
 });
 
 for (let i = 0; i < mobileNavLinks.length; i++) {
@@ -92,4 +98,18 @@ const swiper = new Swiper(".swiper-slider", {
       spaceBetween: 20,
     },
   },
+});
+
+// Show header on scroll
+const header = document.getElementById("main-header");
+const scrollThreshold = 100;
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  if (scrollTop > scrollThreshold) {
+    header.classList.add("header-fixed");
+  } else {
+    header.classList.remove("header-fixed", "header-hidden");
+  }
 });

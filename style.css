@@ -131,3 +131,18 @@ a {
   }
 }
 /* -------------------- Button Animation -------------------- */
+
+.header-fixed {
+  padding: 5px 0 !important;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #ffffff90 !important;
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s ease-in-out;
+}
+.header-hidden {
+  transform: translateY(-100%);
+}
