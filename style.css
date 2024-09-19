@@ -24,3 +24,120 @@ a {
   animation: scroll 20s linear infinite;
 }
 /* -------------------- Brands infinite scroll animation -------------------- */
+
+/* -------------------- Testimonials carousel -------------------- */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+.card {
+  flex: 0 0 calc(33.333% - 40px);
+}
+.navigation-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #088395;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 40px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex: 0 0 calc(33.333% - 40px);
+  }
+}
+/* -------------------- Testimonials carousel -------------------- */
+
+.power-container {
+  position: relative;
+  display: inline-block;
+}
+
+.power {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: #37b7c3;
+  background-color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid transparent;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.power::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(180deg, rgba(55, 183, 195, 0) 0%, #37b7c3 100%);
+  z-index: -1;
+  border-radius: 14px;
+  animation: rotate 8s linear infinite;
+}
+
+.power::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.power img {
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .power {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .power img {
+    width: 20px;
+    height: 20px;
+  }
+}

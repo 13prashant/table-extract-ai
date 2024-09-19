@@ -183,15 +183,17 @@
       <!-- -------------------- Hero Section -------------------- -->
       <section class="bg-gradient-to-b from-[#37B7C333] to-background">
         <div class="te-container py-16 md:py-24 flex flex-col items-center">
-          <span
-            class="text-sm font-semibold text-primary bg-background px-2 md:px-4 py-1 md:py-3 rounded-xl flex items-center gap-2 border-2 border-border duration-200"
-            ><img
-              src="./assets/sparkles.svg"
-              alt="Sparkles"
-              class="w-3 md:w-4 duration-200"
-            />
-            Powered by advanced AI</span
-          >
+          <div class="power-containr">
+            <span
+              class="power power-container text-sm font-semibold text-primary bg-background px-2 md:px-4 py-1 md:py-3 rounded-xl flex items-center gap-2 border-2 border-border duration-200"
+              ><img
+                src="./assets/sparkles.svg"
+                alt="Sparkles"
+                class="w-3 md:w-4 duration-200"
+              />
+              Powered by advanced AI</span
+            >
+          </div>
           <h1
             class="mt-6 text-4xl md:text-6xl text-center md:leading-[84px] font-semibold max-w-5xl duration-200"
           >
@@ -360,7 +362,7 @@
       <!-- -------------------- Problem Section -------------------- -->
 
       <!-- -------------------- Solution Section -------------------- -->
-      <section class="te-container py-20">
+      <section id="features" class="te-container py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">The Solution</span>
           <h2 class="title">
@@ -527,7 +529,7 @@
       <!-- -------------------- Solution Section -------------------- -->
 
       <!-- -------------------- Testimonials Section -------------------- -->
-      <section class="te-container py-20">
+      <section class="hidden lg:block py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">Testimonials</span>
           <h2 class="title">
@@ -539,12 +541,145 @@
           </p>
         </div>
 
-        <h2>Carousel goes here</h2>
+        <div class="mt-28 relative">
+          <div class="carousel-container">
+            <div class="carousel">
+              <!-- Card 1 -->
+              <div class="card bg-secondary p-10 rounded-xl min-w-[676px]">
+                <img src="./assets/quote.svg" alt="Quote icon" class="my-10" />
+                <p class="text-xl mt-6">
+                  TableExtract.ai has been a game-changer for our data
+                  processing needs. What used to take hours of manual work is
+                  now done in minutes with unparalleled accuracy. The AI's
+                  ability to seamlessly convert complex tables from PDFs into
+                  structured data has significantly streamlined our workflow.
+                </p>
+                <div class="flex gap-5 items-center mt-28">
+                  <img
+                    src="./assets/person-1.svg"
+                    alt="Alex Hormozi"
+                    class="w-20"
+                  />
+                  <div class="flex flex-col">
+                    <h5 class="font-semibold text-2xl">Alex Hormozi</h5>
+                    <h5 class="text-2xl text-foreground/70 mt-2">
+                      CEO of acquisition.com
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="card bg-secondary p-10 rounded-xl min-w-[676px]">
+                <img src="./assets/quote.svg" alt="Quote icon" class="my-10" />
+                <p class="text-xl mt-6">
+                  TableExtract.ai has been a game-changer for our data
+                  processing needs. What used to take hours of manual work is
+                  now done in minutes with unparalleled accuracy. The AI's
+                  ability to seamlessly convert complex tables from PDFs into
+                  structured data has significantly streamlined our workflow.
+                </p>
+                <div class="flex gap-5 items-center mt-28">
+                  <img
+                    src="./assets/person-1.svg"
+                    alt="Alex Hormozi"
+                    class="w-20"
+                  />
+                  <div class="flex flex-col">
+                    <h5 class="font-semibold text-2xl">Alex Hormozi</h5>
+                    <h5 class="text-2xl text-foreground/70 mt-2">
+                      CEO of acquisition.com
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="card bg-secondary p-10 rounded-xl min-w-[676px]">
+                <img src="./assets/quote.svg" alt="Quote icon" class="my-10" />
+                <p class="text-xl mt-6">
+                  TableExtract.ai has been a game-changer for our data
+                  processing needs. What used to take hours of manual work is
+                  now done in minutes with unparalleled accuracy. The AI's
+                  ability to seamlessly convert complex tables from PDFs into
+                  structured data has significantly streamlined our workflow.
+                </p>
+                <div class="flex gap-5 items-center mt-28">
+                  <img
+                    src="./assets/person-1.svg"
+                    alt="Alex Hormozi"
+                    class="w-20"
+                  />
+                  <div class="flex flex-col">
+                    <h5 class="font-semibold text-2xl">Alex Hormozi</h5>
+                    <h5 class="text-2xl text-foreground/70 mt-2">
+                      CEO of acquisition.com
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="card bg-secondary p-10 rounded-xl min-w-[676px]">
+                <img src="./assets/quote.svg" alt="Quote icon" class="my-10" />
+                <p class="text-xl mt-6">
+                  TableExtract.ai has been a game-changer for our data
+                  processing needs. What used to take hours of manual work is
+                  now done in minutes with unparalleled accuracy. The AI's
+                  ability to seamlessly convert complex tables from PDFs into
+                  structured data has significantly streamlined our workflow.
+                </p>
+                <div class="flex gap-5 items-center mt-28">
+                  <img
+                    src="./assets/person-1.svg"
+                    alt="Alex Hormozi"
+                    class="w-20"
+                  />
+                  <div class="flex flex-col">
+                    <h5 class="font-semibold text-2xl">Alex Hormozi</h5>
+                    <h5 class="text-2xl text-foreground/70 mt-2">
+                      CEO of acquisition.com
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="card bg-secondary p-10 rounded-xl min-w-[676px]">
+                <img src="./assets/quote.svg" alt="Quote icon" class="my-10" />
+                <p class="text-xl mt-6">
+                  TableExtract.ai has been a game-changer for our data
+                  processing needs. What used to take hours of manual work is
+                  now done in minutes with unparalleled accuracy. The AI's
+                  ability to seamlessly convert complex tables from PDFs into
+                  structured data has significantly streamlined our workflow.
+                </p>
+                <div class="flex gap-5 items-center mt-28">
+                  <img
+                    src="./assets/person-1.svg"
+                    alt="Alex Hormozi"
+                    class="w-20"
+                  />
+                  <div class="flex flex-col">
+                    <h5 class="font-semibold text-2xl">Alex Hormozi</h5>
+                    <h5 class="text-2xl text-foreground/70 mt-2">
+                      CEO of acquisition.com
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navigation-dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
       </section>
       <!-- -------------------- Testimonials Section -------------------- -->
 
       <!-- -------------------- Pricing Section -------------------- -->
-      <section class="te-container py-20">
+      <section id="pricing" class="te-container py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">Pricing</span>
           <h2 class="title">Simple pricing</h2>
@@ -762,7 +897,7 @@
       <!-- -------------------- Pricing Section -------------------- -->
 
       <!-- -------------------- FAQ Section -------------------- -->
-      <section class="te-container py-20">
+      <section id="faq" class="te-container py-20">
         <div class="flex flex-col items-center gap-5">
           <span class="heading">FAQ</span>
           <h2 class="title">Frequently asked questions</h2>
