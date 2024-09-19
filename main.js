@@ -21,6 +21,9 @@ closeButton.addEventListener("click", () => {
 for (let i = 0; i < mobileNavLinks.length; i++) {
   mobileNavLinks[i].addEventListener("click", () => {
     mobileNav.classList.add("hidden");
+
+    // Enable scrolling
+    document.body.classList.remove("overflow-hidden");
   });
 }
 
@@ -34,6 +37,9 @@ document.addEventListener("click", (event) => {
     !closeButton.contains(target)
   ) {
     mobileNav.classList.add("hidden");
+
+    // Enable scrolling
+    document.body.classList.remove("overflow-hidden");
   }
 });
 
@@ -101,15 +107,15 @@ const swiper = new Swiper(".swiper-slider", {
 });
 
 // Show header on scroll
-const header = document.getElementById("main-header");
-const scrollThreshold = 100;
+// const header = document.getElementById("main-header");
+// const scrollThreshold = 100;
 
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+// window.addEventListener("scroll", () => {
+//   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollTop > scrollThreshold) {
-    header.classList.add("header-fixed");
-  } else {
-    header.classList.remove("header-fixed", "header-hidden");
-  }
-});
+//   if (scrollTop > scrollThreshold) {
+//     header.classList.add("header-fixed");
+//   } else {
+//     header.classList.remove("header-fixed", "header-hidden");
+//   }
+// });
